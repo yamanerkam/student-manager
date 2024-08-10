@@ -21,6 +21,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Spring Boot Starter for MongoDB
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    // Spring Boot Starter for Security (for Authentication)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Optional: JWT for securing API (if you plan to use JWT for authentication)
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
 }
 
 tasks.named('test') {
