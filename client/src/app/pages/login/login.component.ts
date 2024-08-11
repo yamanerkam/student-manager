@@ -20,5 +20,10 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  email: string = ""
+  password: string = ""
+  onSubmit() {
 
+    console.log(this.email, this.password)
+  }
 }
