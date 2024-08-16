@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Alex Turner",
+        "grade": 7,
+        "lessonsLeft": 12
+    },
+    {
+        "id": 2,
+        "name": "Olivia Harris",
+        "grade": 10,
+        "lessonsLeft": 7
+    },
+    {
+        "id": 3,
+        "name": "Ethan Carter",
+        "grade": 5,
+        "lessonsLeft": 15
+    },
+    {
+        "id": 4,
+        "name": "Sophia Miller",
+        "grade": 12,
+        "lessonsLeft": 5
+    },
+    {
+        "id": 5,
+        "name": "Noah Wilson",
+        "grade": 9,
+        "lessonsLeft": 18
+    },
+    {
+        "id": 6,
+        "name": "Ava Johnson",
+        "grade": 6,
+        "lessonsLeft": 10
+    },
+    {
+        "id": 7,
+        "name": "Jacob Brown",
+        "grade": 3,
+        "lessonsLeft": 20
+    },
+    {
+        "id": 8,
+        "name": "Emily Davis",
+        "grade": 11,
+        "lessonsLeft": 8
+    },
+    {
+        "id": 9,
+        "name": "William Anderson",
+        "grade": 4,
+        "lessonsLeft": 22
+    },
+    {
+        "id": 10,
+        "name": "Mia Thomas",
+        "grade": 8,
+        "lessonsLeft": 13
+    }
+]

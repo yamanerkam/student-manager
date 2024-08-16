@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
@@ -10,5 +10,9 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './student-card.component.css'
 })
 export class StudentCardComponent {
+  @Input() name!: string;
+  @Input() job!: string;
+  @Input() grade!: number;
+  @Input() lessonsLeft!: number;
 
 }
