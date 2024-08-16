@@ -23,7 +23,6 @@ export class LoginComponent {
   email: string = ""
   password: string = ""
   onSubmit() {
-
     console.log(this.email, this.password)
   }
 }

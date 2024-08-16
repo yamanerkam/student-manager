@@ -1,24 +1,24 @@
 <div class="wrapper">
     <div class="login-container">
         <h1>Signup</h1>
-        <form>
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
 
             <p-floatLabel>
-                <input id="email" type="text" pInputText />
+                <input name="email" type="text" pInputText [(ngModel)]="email" />
                 <label for="email">Email</label>
             </p-floatLabel>
 
             <p-floatLabel>
-                <input id="password" type="password" pInputText />
+                <input name="password" type="password" pInputText [(ngModel)]="password" />
                 <label for="password">Password</label>
             </p-floatLabel>
 
             <p-floatLabel>
-                <input id="password" type="password" pInputText />
+                <input name="password" type="password" pInputText [(ngModel)]="passwordAgain" />
                 <label for="password">Confirm Password</label>
             </p-floatLabel>
 
-            <p-button label="Signup"></p-button>
+            <p-button type="submit" label="Signup"></p-button>
 
         </form>
     </div>

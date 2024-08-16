@@ -20,5 +20,20 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+  email: string = ''
+  password: string = ''
+  passwordAgain: string = ''
+
+  onSubmit() {
+    if (this.email !== '' && this.password !== '' && this.passwordAgain !== '') {
+      console.log(this.email, this.password, this.passwordAgain)
+      if (this.password === this.passwordAgain) {
+        console.log('yes')
+      } else {
+        console.log('no')
+      }
+    }
+  }
+
 
 }
