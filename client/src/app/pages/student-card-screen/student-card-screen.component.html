@@ -1,7 +1,9 @@
 <h1>Students</h1>
-<div ngF class="cards">
+<div class="cards">
 
-    <button (click)="xd()">xxx</button>
+
+    <app-student-card *ngFor="let student of students" [student]="student" justTry="xxxxx" />
+
 
 
 

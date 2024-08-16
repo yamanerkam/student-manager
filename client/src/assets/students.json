@@ -3,60 +3,70 @@
         "id": 1,
         "name": "Alex Turner",
         "grade": 7,
-        "lessonsLeft": 12
+        "lessonsLeft": 12,
+        "job": "Junior Web Developer"
     },
     {
         "id": 2,
         "name": "Olivia Harris",
         "grade": 10,
-        "lessonsLeft": 7
+        "lessonsLeft": 7,
+        "job": "Social Media Manager"
     },
     {
         "id": 3,
         "name": "Ethan Carter",
         "grade": 5,
-        "lessonsLeft": 15
+        "lessonsLeft": 15,
+        "job": "Junior Game Designer"
     },
     {
         "id": 4,
         "name": "Sophia Miller",
         "grade": 12,
-        "lessonsLeft": 5
+        "lessonsLeft": 5,
+        "job": "Marketing Intern"
     },
     {
         "id": 5,
         "name": "Noah Wilson",
         "grade": 9,
-        "lessonsLeft": 18
+        "lessonsLeft": 18,
+        "job": "Apprentice Electrician"
     },
     {
         "id": 6,
         "name": "Ava Johnson",
         "grade": 6,
-        "lessonsLeft": 10
+        "lessonsLeft": 10,
+        "job": "Animal Care Assistant"
     },
     {
         "id": 7,
         "name": "Jacob Brown",
         "grade": 3,
-        "lessonsLeft": 20
+        "lessonsLeft": 20,
+        "job": "Delivery Driver Helper"
     },
     {
         "id": 8,
         "name": "Emily Davis",
         "grade": 11,
-        "lessonsLeft": 8
+        "lessonsLeft": 8,
+        "job": "Customer Service Representative"
     },
     {
         "id": 9,
         "name": "William Anderson",
         "grade": 4,
-        "lessonsLeft": 22
+        "lessonsLeft": 22,
+        "job": "Kitchen Helper"
     },
     {
         "id": 10,
         "name": "Mia Thomas",
         "grade": 8,
-        "lessonsLeft": 13
+        "lessonsLeft": 13,
+        "job": "Junior Graphic Designer"
     }
 ]
