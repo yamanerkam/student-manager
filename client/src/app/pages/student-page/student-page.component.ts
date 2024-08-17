@@ -6,6 +6,7 @@ import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
 import { CalendarModule } from 'primeng/calendar';
+import { DialogModule } from 'primeng/dialog';
 
 
 @Component({
@@ -18,11 +19,16 @@ import { CalendarModule } from 'primeng/calendar';
     PanelModule,
     CardModule,
     CalendarModule,
+    DialogModule
   ],
   templateUrl: './student-page.component.html',
   styleUrl: './student-page.component.css'
 })
 export class StudentPageComponent {
+  visible: boolean = false
+  showDialog() {
+    this.visible = true
+  }
 
   lessonsLeft: number = 10
   lessonManaging(operation: string) {
