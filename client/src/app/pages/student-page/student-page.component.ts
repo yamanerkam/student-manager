@@ -10,7 +10,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
-
+import * as student from '../../../assets/students.json'
 
 @Component({
   selector: 'app-student-page',
@@ -31,17 +31,24 @@ import { FormsModule } from '@angular/forms';
 })
 export class StudentPageComponent implements OnInit {
   id: string = ''
+  students = (student as any).default
+  realStudent: any;
 
   constructor(private route: ActivatedRoute) {
 
   }
 
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.id = params['id'];
       console.log('ID:', this.id);
+      this.realStudent = this.students.filter((sto: any) => sto.id == this.id)[0]
+      console.log(this.realStudent)
+
     });
   }
+
 
 
 

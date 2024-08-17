@@ -4,69 +4,79 @@
         "name": "Alex Turner",
         "grade": 7,
         "lessonsLeft": 12,
-        "job": "Junior Web Developer"
+        "job": "Junior Web Developer",
+        "email": "alex.turner@example.com"
     },
     {
         "id": 2,
         "name": "Olivia Harris",
         "grade": 10,
         "lessonsLeft": 7,
-        "job": "Social Media Manager"
+        "job": "Social Media Manager",
+        "email": "olivia.harris@example.com"
     },
     {
         "id": 3,
         "name": "Ethan Carter",
         "grade": 5,
         "lessonsLeft": 15,
-        "job": "Junior Game Designer"
+        "job": "Junior Game Designer",
+        "email": "ethan.carter@example.com"
     },
     {
         "id": 4,
         "name": "Sophia Miller",
         "grade": 12,
         "lessonsLeft": 5,
-        "job": "Marketing Intern"
+        "job": "Marketing Intern",
+        "email": "sophia.miller@example.com"
     },
     {
         "id": 5,
         "name": "Noah Wilson",
         "grade": 9,
         "lessonsLeft": 18,
-        "job": "Apprentice Electrician"
+        "job": "Apprentice Electrician",
+        "email": "noah.wilson@example.com"
     },
     {
         "id": 6,
         "name": "Ava Johnson",
         "grade": 6,
         "lessonsLeft": 10,
-        "job": "Animal Care Assistant"
+        "job": "Animal Care Assistant",
+        "email": "ava.johnson@example.com"
     },
     {
         "id": 7,
         "name": "Jacob Brown",
         "grade": 3,
         "lessonsLeft": 20,
-        "job": "Delivery Driver Helper"
+        "job": "Delivery Driver Helper",
+        "email": "jacob.brown@example.com"
     },
     {
         "id": 8,
         "name": "Emily Davis",
         "grade": 11,
         "lessonsLeft": 8,
-        "job": "Customer Service Representative"
+        "job": "Customer Service Representative",
+        "email": "emily.davis@example.com"
     },
     {
         "id": 9,
         "name": "William Anderson",
         "grade": 4,
         "lessonsLeft": 22,
-        "job": "Kitchen Helper"
+        "job": "Kitchen Helper",
+        "email": "william.anderson@example.com"
     },
     {
         "id": 10,
         "name": "Mia Thomas",
         "grade": 8,
         "lessonsLeft": 13,
-        "job": "Junior Graphic Designer"
+        "job": "Junior Graphic Designer",
+        "email": "mia.thomas@example.com"
     }
 ]
