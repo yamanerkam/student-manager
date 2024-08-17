@@ -8,12 +8,14 @@ import { CardModule } from 'primeng/card';
 import { CalendarModule } from 'primeng/calendar';
 import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-student-page',
   standalone: true,
   imports: [
+    FormsModule,
     InputNumberModule,
     InputTextModule,
     ButtonModule,
@@ -29,6 +31,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
 export class StudentPageComponent {
   visibleDeletePopUp: boolean = false
   visibleAddPopUp: boolean = false
+  lessonsAdded!: number | null;
+  paidMoney!: number | null;
+  lessonsLeft: number = 10
+
 
   showDeletePopUp() {
     this.visibleDeletePopUp = true
@@ -38,7 +44,14 @@ export class StudentPageComponent {
     this.visibleAddPopUp = true
   }
 
-  lessonsLeft: number = 10
+  addLessons() {
+    if (this.lessonsAdded) {
+      this.lessonsLeft = this.lessonsLeft + this.lessonsAdded
+      this.lessonsAdded = null
+      this.paidMoney = null
+    }
+  }
+
   lessonManaging(operation: string) {
     if (this.lessonsLeft >= 0) {
       if (operation === '+') {
