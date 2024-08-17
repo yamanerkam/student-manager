@@ -5,6 +5,10 @@
     gap: 5px;
 }
 
+.pops {
+    margin: 0;
+}
+
 .p-dialog {
     width: 25rem;
 }

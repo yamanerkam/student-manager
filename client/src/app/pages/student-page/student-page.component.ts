@@ -7,12 +7,14 @@ import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
 import { CalendarModule } from 'primeng/calendar';
 import { DialogModule } from 'primeng/dialog';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 
 @Component({
   selector: 'app-student-page',
   standalone: true,
   imports: [
+    InputNumberModule,
     InputTextModule,
     ButtonModule,
     TableModule,
@@ -25,9 +27,15 @@ import { DialogModule } from 'primeng/dialog';
   styleUrl: './student-page.component.css'
 })
 export class StudentPageComponent {
-  visible: boolean = false
-  showDialog() {
-    this.visible = true
+  visibleDeletePopUp: boolean = false
+  visibleAddPopUp: boolean = false
+
+  showDeletePopUp() {
+    this.visibleDeletePopUp = true
+  }
+
+  showAddPopUp() {
+    this.visibleAddPopUp = true
   }
 
   lessonsLeft: number = 10

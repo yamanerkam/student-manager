@@ -34,19 +34,41 @@
 
             </div>
             <br>
-            <p-button (onClick)="showDialog()" label="Update the Lessons" />
-            <p-dialog header="Update the lessons" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
-                <span class="p-text-secondary block mb-5">Lessons Left : {{lessonsLeft}} </span>
-                <div class="flex align-items-center gap-3 mb-3">
-                    <label for="username" class="font-semibold w-6rem">Adding</label>
-                    <input pInputText id="username" class="flex-auto" autocomplete="off" />
-                </div>
+            <div class="btn-area">
+                <p-button label="Add Lessons" (click)="showAddPopUp()" />
+                <p-dialog header="Add lessons" [modal]="true" [(visible)]="visibleAddPopUp"
+                    [style]="{ width: '25rem' }">
+                    <span class="p-text-secondary block mb-5">Lessons Left : {{lessonsLeft}} </span>
+                    <div class="flex align-items-center gap-3 mb-3">
+                        <label for="money" class="font-semibold w-6rem">Paid</label>
+                        <p-inputNumber id="money" class="flex-auto" autocomplete="off"></p-inputNumber>
+                    </div>
 
-                <div class="flex justify-content-end gap-2">
-                    <p-button label="Cancel" severity="secondary" (onClick)="visible = false" />
-                    <p-button label="Add" (onClick)="visible = false" />
-                </div>
-            </p-dialog>
+                    <div class="flex align-items-center gap-3 mb-3">
+                        <label for="lessons" class="font-semibold w-6rem">Adding</label>
+                        <p-inputNumber id="lessons" class="flex-auto" autocomplete="off"></p-inputNumber>
+                    </div>
+
+                    <div class="flex justify-content-end gap-2">
+                        <p-button label="Cancel" severity="secondary" (onClick)="visibleAddPopUp = false" />
+                        <p-button label="Add" (onClick)="visibleAddPopUp=false" />
+                    </div>
+                </p-dialog><p-button (onClick)="showDeletePopUp()" label="Delete Lessons" />
+                <p-dialog header="Delete lessons" [modal]="true" [(visible)]="visibleDeletePopUp"
+                    [style]="{ width: '25rem' }">
+                    <span class="p-text-secondary block mb-5">Lessons Left : {{lessonsLeft}} </span>
+                    <div class="flex align-items-center gap-3 mb-3">
+                        <label for="username" class="font-semibold w-6rem">Deleting</label>
+                        <input pInputText id="username" class="flex-auto" autocomplete="off" />
+                    </div>
+
+                    <div class="flex justify-content-end gap-2">
+                        <p-button label="Cancel" severity="secondary" (onClick)="visibleDeletePopUp = false" />
+                        <p-button label="Add" (onClick)="visibleDeletePopUp = false" />
+                    </div>
+                </p-dialog>
+            </div>
+
         </p-panel>
 
         <p-panel header="Homework">
