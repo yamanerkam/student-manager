@@ -6,6 +6,7 @@ import { ToDoComponent } from './pages/to-do/to-do.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { StudentCardComponent } from './components/student-card/student-card.component';
 import { StudentCardScreenComponent } from './pages/student-card-screen/student-card-screen.component';
+import { StudentPageComponent } from './pages/student-page/student-page.component';
 
 export const routes: Routes = [
 
@@ -15,7 +16,7 @@ export const routes: Routes = [
     { path: 'home', component: HomepageComponent },
     { path: 'todo', component: ToDoComponent },
     { path: 'students', component: StudentCardScreenComponent },
-
+    { path: 'student/:id', component: StudentPageComponent },
     { path: '**', component: NotFoundComponent },
 
 
