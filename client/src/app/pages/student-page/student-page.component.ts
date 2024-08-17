@@ -33,6 +33,8 @@ export class StudentPageComponent {
   visibleAddPopUp: boolean = false
   lessonsAdded!: number | null;
   paidMoney!: number | null;
+  lessonsDeleted!: number | null;
+  reasonForCancellation!: string | null;
   lessonsLeft: number = 10
 
 
@@ -45,10 +47,19 @@ export class StudentPageComponent {
   }
 
   addLessons() {
-    if (this.lessonsAdded) {
+    if (this.lessonsAdded && this.paidMoney) {
       this.lessonsLeft = this.lessonsLeft + this.lessonsAdded
       this.lessonsAdded = null
       this.paidMoney = null
+    }
+  }
+
+  deleteLessons() {
+    if (this.lessonsDeleted) {
+      console.log('delete lessons')
+      this.lessonsLeft = this.lessonsLeft - this.lessonsDeleted
+      this.lessonsDeleted = null
+      this.reasonForCancellation = null
     }
   }
 
