@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -28,7 +29,23 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './student-page.component.html',
   styleUrl: './student-page.component.css'
 })
-export class StudentPageComponent {
+export class StudentPageComponent implements OnInit {
+  id: string = ''
+
+  constructor(private route: ActivatedRoute) {
+
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+      console.log('ID:', this.id);
+    });
+  }
+
+
+
+
   visibleDeletePopUp: boolean = false
   visibleAddPopUp: boolean = false
   lessonsAdded!: number | null;
