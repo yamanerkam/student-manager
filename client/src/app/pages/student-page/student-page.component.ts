@@ -24,4 +24,21 @@ import { CalendarModule } from 'primeng/calendar';
 })
 export class StudentPageComponent {
 
+  lessonsLeft: number = 10
+
+  lessonManaging(operation: string) {
+    if (this.lessonsLeft >= 0) {
+      if (operation === '+') {
+        this.lessonsLeft = this.lessonsLeft + 1
+      } else if (operation === '-' && this.lessonsLeft != 0) {
+        this.lessonsLeft = this.lessonsLeft - 1
+      }
+    } else {
+      console.log('nope')
+      return
+    }
+
+
+  }
+
 }
