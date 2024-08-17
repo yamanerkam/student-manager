@@ -34,6 +34,14 @@ export class StudentPageComponent implements OnInit {
   students = (student as any).default
   realStudent: any;
 
+  visibleDeletePopUp: boolean = false
+  visibleAddPopUp: boolean = false
+  lessonsAdded!: number | null;
+  paidMoney!: number | null;
+  lessonsDeleted!: number | null;
+  reasonForCancellation!: string | null;
+  lessonsLeft: number = 0
+
   constructor(private route: ActivatedRoute) {
 
   }
@@ -44,8 +52,7 @@ export class StudentPageComponent implements OnInit {
       this.id = params['id'];
       console.log('ID:', this.id);
       this.realStudent = this.students.filter((sto: any) => sto.id == this.id)[0]
-      console.log(this.realStudent)
-
+      this.lessonsLeft = this.realStudent.lessonsLeft
     });
   }
 
@@ -53,13 +60,7 @@ export class StudentPageComponent implements OnInit {
 
 
 
-  visibleDeletePopUp: boolean = false
-  visibleAddPopUp: boolean = false
-  lessonsAdded!: number | null;
-  paidMoney!: number | null;
-  lessonsDeleted!: number | null;
-  reasonForCancellation!: string | null;
-  lessonsLeft: number = 10
+
 
 
   showDeletePopUp() {
