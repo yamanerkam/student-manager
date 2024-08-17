@@ -30,7 +30,7 @@
                 <br>
                 <br>
                 <p-button (click)="lessonManaging('+')">+</p-button>
-                <p-button (click)="lessonManaging('-')">-</p-button>
+                <p-button [disabled]="lessonsLeft===0" (click)="lessonManaging('-')">-</p-button>
             </div>
             <br>
             <p-button>Add a new package</p-button>
