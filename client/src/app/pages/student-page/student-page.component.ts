@@ -19,7 +19,8 @@ type Homework = {
   deadline?: Date,
   time?: Date,
   studentName: string,
-  email: string
+  email: string,
+  links?: string[]
 }
 
 @Component({
