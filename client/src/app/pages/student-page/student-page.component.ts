@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
@@ -27,6 +28,7 @@ type Homework = {
   selector: 'app-student-page',
   standalone: true,
   imports: [
+    CommonModule,
     FormsModule,
     InputNumberModule,
     InputTextModule,
@@ -54,12 +56,14 @@ export class StudentPageComponent implements OnInit {
   reasonForCancellation!: string | null;
   lessonsLeft: number = 0
 
+  visibleNewLink = false
 
   homework: Homework | null = null
 
   constructor(private route: ActivatedRoute) {
 
   }
+
 
 
   ngOnInit(): void {
@@ -77,6 +81,13 @@ export class StudentPageComponent implements OnInit {
     });
   }
 
+  linkToggle() {
+    this.visibleNewLink = !this.visibleNewLink
+  }
+
+  newLink() {
+    this.linkToggle()
+  }
 
 
   sendHomework() {
