@@ -17,6 +17,7 @@ type Homework = {
   title: string,
   desc: string,
   deadline?: Date,
+  time?: Date,
   studentName: string,
   email: string
 }

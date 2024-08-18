@@ -101,9 +101,15 @@
                 </div>
 
                 <div>
-                    <label for="date">Deadline</label>
+                    <label for="date">Deadline Day</label>
 
                     <p-calendar name="date" [(ngModel)]="homework!.deadline" />
+                </div>
+
+                <div>
+                    <label for="time">Deadline Time</label>
+
+                    <p-calendar name="time" [timeOnly]="true" [(ngModel)]="homework!.time" />
                 </div>
 
                 <div>
