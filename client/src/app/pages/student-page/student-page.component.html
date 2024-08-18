@@ -82,26 +82,33 @@
         </p-panel>
 
         <p-panel header="Homework">
-            <form action="submit">
+            <form (ngSubmit)="sendHomework()">
                 <div>
-                    <label for="email" class="">Email</label>
-                    {{realStudent.email}}
+                    <label>Email</label>
+                    {{homework!.email}}
 
                 </div>
 
                 <div>
                     <label for="title" class="">Title</label>
-                    <input pInputText id="title" class="flex-auto" autocomplete="off" [(ngModel)]="homeworkTitle" />
+                    <input pInputText name="title" class="flex-auto" autocomplete="off" [(ngModel)]="homework!.title" />
                 </div>
 
                 <div>
                     <label for="desc">Description</label>
-                    <textarea id="desc" rows="5" cols="30" pInputTextarea>
+                    <textarea name="desc" rows="5" cols="30" [(ngModel)]="homework!.desc" pInputTextarea>
                 </textarea>
                 </div>
 
                 <div>
-                    <p-button label="Send" />
+                    <label for="date">Deadline</label>
+
+                    <p-calendar name="date" [(ngModel)]="homework!.deadline" />
+                </div>
+
+                <div>
+
+                    <p-button type="submit" label="Send" />
 
                 </div>
             </form>

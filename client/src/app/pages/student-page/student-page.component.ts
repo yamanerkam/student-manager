@@ -16,7 +16,9 @@ import * as student from '../../../assets/students.json'
 type Homework = {
   title: string,
   desc: string,
-  //date
+  deadline?: Date,
+  studentName: string,
+  email: string
 }
 
 @Component({
@@ -50,6 +52,9 @@ export class StudentPageComponent implements OnInit {
   reasonForCancellation!: string | null;
   lessonsLeft: number = 0
 
+
+  homework: Homework | null = null
+
   constructor(private route: ActivatedRoute) {
 
   }
@@ -61,12 +66,20 @@ export class StudentPageComponent implements OnInit {
       console.log('ID:', this.id);
       this.realStudent = this.students.filter((sto: any) => sto.id == this.id)[0]
       this.lessonsLeft = this.realStudent.lessonsLeft
+      this.homework = {
+        title: '',
+        desc: '',
+        studentName: this.realStudent.name,
+        email: this.realStudent.email
+      }
     });
   }
 
 
 
-
+  sendHomework() {
+    console.log(this.homework)
+  }
 
 
 
