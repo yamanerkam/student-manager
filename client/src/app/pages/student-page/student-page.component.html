@@ -82,7 +82,29 @@
         </p-panel>
 
         <p-panel header="Homework">
+            <form action="submit">
+                <div>
+                    <label for="email" class="">Email</label>
+                    {{realStudent.email}}
 
+                </div>
+
+                <div>
+                    <label for="title" class="">Title</label>
+                    <input pInputText id="title" class="flex-auto" autocomplete="off" [(ngModel)]="homeworkTitle" />
+                </div>
+
+                <div>
+                    <label for="desc">Description</label>
+                    <textarea id="desc" rows="5" cols="30" pInputTextarea>
+                </textarea>
+                </div>
+
+                <div>
+                    <p-button label="Send" />
+
+                </div>
+            </form>
         </p-panel>
     </div>
 </div>

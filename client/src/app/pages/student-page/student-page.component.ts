@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
@@ -11,6 +12,12 @@ import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import * as student from '../../../assets/students.json'
+
+type Homework = {
+  title: string,
+  desc: string,
+  //date
+}
 
 @Component({
   selector: 'app-student-page',
@@ -24,7 +31,8 @@ import * as student from '../../../assets/students.json'
     PanelModule,
     CardModule,
     CalendarModule,
-    DialogModule
+    DialogModule,
+    InputTextareaModule
   ],
   templateUrl: './student-page.component.html',
   styleUrl: './student-page.component.css'
@@ -33,7 +41,7 @@ export class StudentPageComponent implements OnInit {
   id: string = ''
   students = (student as any).default
   realStudent: any;
-
+  homeworkTitle: string = ''
   visibleDeletePopUp: boolean = false
   visibleAddPopUp: boolean = false
   lessonsAdded!: number | null;
