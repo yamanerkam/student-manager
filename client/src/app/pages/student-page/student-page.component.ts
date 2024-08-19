@@ -56,6 +56,8 @@ export class StudentPageComponent implements OnInit {
   reasonForCancellation!: string | null;
   lessonsLeft: number = 0
 
+  linkInputValue: string = ''
+
   visibleNewLink = false
 
   homework: Homework | null = null
@@ -89,6 +91,9 @@ export class StudentPageComponent implements OnInit {
   saveLink(link: string) {
     this.homework?.links?.push(link)
     console.log(this.homework)
+    this.linkInputValue = ''
+    this.linkToggle()
+
   }
 
   newLink() {

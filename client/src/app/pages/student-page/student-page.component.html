@@ -118,8 +118,9 @@
 
                     <label for="link">Link</label>
                     <div class="link-area">
-                        <input #linkInput pInputText name="link" class="flex-auto" autocomplete="off" />
-                        <p-button (click)="saveLink(linkInput.value)" label="Save" icon="pi pi-check" />
+                        <input #linkInput pInputText [(ngModel)]="linkInputValue" name="link" class="flex-auto"
+                            autocomplete="off" />
+                        <p-button (click)="saveLink(linkInputValue)" label="Save" icon="pi pi-check" />
                         <p-button (click)="linkToggle()" label="Cancel" icon="pi pi-times" severity="danger" />
                     </div>
 
