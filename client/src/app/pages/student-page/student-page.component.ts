@@ -14,6 +14,9 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import * as student from '../../../assets/students.json'
 
+import { RouterLinkActive, RouterLink } from '@angular/router';
+
+
 type Homework = {
   title: string,
   desc: string,
@@ -28,6 +31,8 @@ type Homework = {
   selector: 'app-student-page',
   standalone: true,
   imports: [
+    RouterLinkActive,
+    RouterLink,
     CommonModule,
     FormsModule,
     InputNumberModule,
