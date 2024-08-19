@@ -100,6 +100,15 @@
                     <label for="desc">Description</label>
                     <textarea name="desc" rows="5" cols="30" [(ngModel)]="homework!.desc" pInputTextarea> </textarea>
                 </div>
+                <div>
+                    Links:
+                    <ul>
+                        <li *ngFor=" let link of homework!.links">
+                            {{link}}
+                        </li>
+                    </ul>
+                </div>
+
 
                 <div>
                     <p-button [disabled]="visibleNewLink" (click)="newLink()" label="+ new link" />
@@ -109,9 +118,8 @@
 
                     <label for="link">Link</label>
                     <div class="link-area">
-                        <input pInputText name="link" class="flex-auto" autocomplete="off"
-                            [(ngModel)]="homework!.links" />
-                        <p-button label="Save" icon="pi pi-check" />
+                        <input pInputText name="link" class="flex-auto" autocomplete="off" />
+                        <p-button (click)="saveLink('d')" label="Save" icon="pi pi-check" />
                         <p-button (click)="linkToggle()" label="Cancel" icon="pi pi-times" severity="danger" />
                     </div>
 

@@ -76,13 +76,19 @@ export class StudentPageComponent implements OnInit {
         title: '',
         desc: '',
         studentName: this.realStudent.name,
-        email: this.realStudent.email
+        email: this.realStudent.email,
+        links: []
       }
     });
   }
 
   linkToggle() {
     this.visibleNewLink = !this.visibleNewLink
+  }
+
+  saveLink(link: string) {
+    this.homework?.links?.push(link)
+    console.log(this.homework)
   }
 
   newLink() {
