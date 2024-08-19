@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Alex Turner",
+        "photoURL": "https://randomuser.me/api/portraits/men/92.jpg",
         "grade": 7,
         "lessonsLeft": 12,
         "job": "Junior Web Developer",
@@ -10,6 +11,7 @@
     {
         "id": 2,
         "name": "Olivia Harris",
+        "photoURL": "https://randomuser.me/api/portraits/men/91.jpg",
         "grade": 10,
         "lessonsLeft": 7,
         "job": "Social Media Manager",
@@ -18,6 +20,7 @@
     {
         "id": 3,
         "name": "Ethan Carter",
+        "photoURL": "https://randomuser.me/api/portraits/men/81.jpg",
         "grade": 5,
         "lessonsLeft": 15,
         "job": "Junior Game Designer",
@@ -26,6 +29,7 @@
     {
         "id": 4,
         "name": "Sophia Miller",
+        "photoURL": "https://randomuser.me/api/portraits/men/61.jpg",
         "grade": 12,
         "lessonsLeft": 5,
         "job": "Marketing Intern",
@@ -34,6 +38,7 @@
     {
         "id": 5,
         "name": "Noah Wilson",
+        "photoURL": "https://randomuser.me/api/portraits/men/21.jpg",
         "grade": 9,
         "lessonsLeft": 18,
         "job": "Apprentice Electrician",
@@ -42,6 +47,7 @@
     {
         "id": 6,
         "name": "Ava Johnson",
+        "photoURL": "https://randomuser.me/api/portraits/men/51.jpg",
         "grade": 6,
         "lessonsLeft": 10,
         "job": "Animal Care Assistant",
@@ -50,6 +56,7 @@
     {
         "id": 7,
         "name": "Jacob Brown",
+        "photoURL": "https://randomuser.me/api/portraits/men/22.jpg",
         "grade": 3,
         "lessonsLeft": 20,
         "job": "Delivery Driver Helper",
@@ -58,6 +65,7 @@
     {
         "id": 8,
         "name": "Emily Davis",
+        "photoURL": "https://randomuser.me/api/portraits/men/1.jpg",
         "grade": 11,
         "lessonsLeft": 8,
         "job": "Customer Service Representative",
@@ -66,6 +74,7 @@
     {
         "id": 9,
         "name": "William Anderson",
+        "photoURL": "https://randomuser.me/api/portraits/men/2.jpg",
         "grade": 4,
         "lessonsLeft": 22,
         "job": "Kitchen Helper",
@@ -74,6 +83,7 @@
     {
         "id": 10,
         "name": "Mia Thomas",
+        "photoURL": "https://randomuser.me/api/portraits/men/3.jpg",
         "grade": 8,
         "lessonsLeft": 13,
         "job": "Junior Graphic Designer",

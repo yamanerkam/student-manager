@@ -9,6 +9,7 @@ export interface Student {
   grade: number;
   lessonsLeft: number;
   job: string;
+  photoURL: string;
 }
 
 @Component({
