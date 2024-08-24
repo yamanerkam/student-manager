@@ -22,7 +22,22 @@
                 <p-inputNumber name="grade"></p-inputNumber>
             </div>
             
+            <div class="card flex justify-content-center">
+                <label for="profile-picture">Profile Picture</label>
+                <p-toast />
+                <p-fileUpload 
+                    mode="basic" 
+                    chooseLabel="Choose" 
+                    chooseIcon="pi pi-upload"
+                    name="profile-picture" 
+                    url="https://www.primefaces.org/cdn/api/upload.php" 
+                    accept="image/*" 
+                    maxFileSize="1000000" 
+                    (onUpload)="onUpload($event)"
+                     />
+            </div>
 
+            <img [src]="src" alt="">
         </div>
     </div>
 </p-card>
