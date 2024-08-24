@@ -7,6 +7,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { StudentCardScreenComponent } from './pages/student-card-screen/student-card-screen.component';
 import { StudentPageComponent } from './pages/student-page/student-page.component';
 import { NewStudentPageComponent } from './pages/new-student-page/new-student-page.component';
+import { SidebarHeadlessDemoComponent } from './sidebar-headless-demo/sidebar-headless-demo.component';
 
 export const routes: Routes = [
 
@@ -17,7 +18,8 @@ export const routes: Routes = [
     { path: 'todo', component: ToDoComponent },
     { path: 'students', component: StudentCardScreenComponent },
     { path: 'student/:id', component: StudentPageComponent },
-    {path:'new-student',component:NewStudentPageComponent},
+    { path:'new-student',component:NewStudentPageComponent},
+    { path:'a',component:SidebarHeadlessDemoComponent},
     { path: '**', component: NotFoundComponent },
 
 
