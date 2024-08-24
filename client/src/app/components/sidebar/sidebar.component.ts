@@ -5,13 +5,15 @@ import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
 import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
+
 @Component({
-  selector: 'app-sidebar-headless-demo',
+  selector: 'app-sidebar',
   standalone: true,
   imports: [SidebarModule, ButtonModule, RippleModule, AvatarModule, StyleClassModule],
-  templateUrl: './sidebar-headless-demo.component.html',
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css'
 })
-export class SidebarHeadlessDemoComponent {
+export class SidebarComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
   closeCallback(e:any): void {
