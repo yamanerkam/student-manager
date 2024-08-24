@@ -9,7 +9,13 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
-
+type newStudent = {
+  profilePictureURL:string,
+  studentName:string,
+  studentEmail:string,
+  studentJob:string,
+  studentGrade?:number
+}
 @Component({
   selector: 'app-new-student-page',
   standalone: true,
@@ -19,13 +25,31 @@ import { MessageService } from 'primeng/api';
   providers:[MessageService]
 })
 export class NewStudentPageComponent {
-  src:string = ""
+
+  
+student:newStudent={
+  profilePictureURL: "",
+  studentName: "",
+  studentEmail : "",
+  studentJob: "",
+}
+
+
+
 
   constructor(private messageService: MessageService) {}
 
   onUpload(event:any) {
     console.log(event.files[0].objectURL.changingThisBreaksApplicationSecurity)
-    this.src=event.files[0].objectURL.changingThisBreaksApplicationSecurity
+    this.student.profilePictureURL=event.files[0].objectURL.changingThisBreaksApplicationSecurity
     this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded with Basic Mode' });
-}
+ }
+
+  onSubmit(){
+    if(this.student.studentName && this.student.studentEmail && this.student.studentJob && this.student.profilePictureURL && this.student.studentGrade){
+        console.log(this.student)
+    }else{
+      console.log("what are you doing?")
+    }
+  }
 }
