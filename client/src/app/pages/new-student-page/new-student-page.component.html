@@ -1,1 +1,28 @@
-<p>new-student-page works!</p>
+<p-card  [style]="{ width: '360px' }">
+    <div class="p-card-header">
+        <h2>New Student</h2>
+    </div>
+
+    <div class="p-card-body">
+        <div class="p-fluid">
+            <div class="p-field">
+                <label for="student-name">Name</label>
+                <input pInputText name="student-name" type="text">
+            </div>
+            <div class="p-field">
+                <label for="email">Email</label>
+                <input pInputText name="email" type="text">
+            </div>
+            <div class="p-field">
+                <label for="job">Job</label>
+                <input pInputText name="job" type="text">
+            </div>
+            <div class="p-field">
+                <label for="grade">Grade</label>
+                <p-inputNumber name="grade"></p-inputNumber>
+            </div>
+            
+
+        </div>
+    </div>
+</p-card>
