@@ -44,9 +44,8 @@
 
             <img [src]="student.profilePictureURL" alt="">
             <br>
-            <button type="submit" pButton>Add</button>
-            </form>
-            
+            <button [disabled]="toggleAddButton" type="submit" pButton>Add</button>
+            </form>            
         </div>
     </div>
 </p-card>

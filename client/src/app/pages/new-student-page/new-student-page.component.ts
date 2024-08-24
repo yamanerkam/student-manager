@@ -25,7 +25,7 @@ type newStudent = {
   providers:[MessageService]
 })
 export class NewStudentPageComponent {
-
+toggleAddButton:boolean = false
   
 student:newStudent={
   profilePictureURL: "",
@@ -46,10 +46,19 @@ student:newStudent={
  }
 
   onSubmit(){
+    this.toggleAddButton = true
     if(this.student.studentName && this.student.studentEmail && this.student.studentJob && this.student.profilePictureURL && this.student.studentGrade){
         console.log(this.student)
+        setTimeout(()=>{
+          this.toggleAddButton = false
+        },2000)
+
     }else{
-      console.log("what are you doing?")
+      console.log("else")
+      setTimeout(()=>{
+        this.toggleAddButton = false
+      },2000)
+
     }
   }
 }
