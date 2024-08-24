@@ -34,9 +34,6 @@ student:newStudent={
   studentJob: "",
 }
 
-
-
-
   constructor(private messageService: MessageService) {}
 
   onUpload(event:any) {
@@ -48,8 +45,8 @@ student:newStudent={
   onSubmit(){
     this.toggleAddButton = true
     if(this.student.studentName && this.student.studentEmail && this.student.studentJob && this.student.profilePictureURL && this.student.studentGrade){
-        console.log(this.student)
         setTimeout(()=>{
+          console.log(this.student)
           this.toggleAddButton = false
         },2000)
 
