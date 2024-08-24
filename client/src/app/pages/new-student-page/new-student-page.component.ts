@@ -9,10 +9,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
-interface UploadEvent {
-  originalEvent: Event;
-  files: File[];
-}
+
 @Component({
   selector: 'app-new-student-page',
   standalone: true,
@@ -23,6 +20,7 @@ interface UploadEvent {
 })
 export class NewStudentPageComponent {
   src:string = ""
+
   constructor(private messageService: MessageService) {}
 
   onUpload(event:any) {
