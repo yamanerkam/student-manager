@@ -10,7 +10,6 @@ import { NewStudentPageComponent } from './pages/new-student-page/new-student-pa
 import { HomeworkComponent } from './pages/homework/homework.component';
 import { CalenderComponent } from './pages/calender/calender.component';
 import { FinanceComponent } from './pages/finance/finance.component';
-import { Messages } from 'primeng/messages';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { NewPackageComponent } from './pages/new-package/new-package.component';

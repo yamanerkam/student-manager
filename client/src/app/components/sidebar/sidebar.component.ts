@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
@@ -6,7 +6,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
 
 
 @Component({
@@ -16,7 +16,11 @@ import { RouterModule, Routes } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
+  constructor(private router: Router) {
+
+  }
+
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
   closeCallback(e: any): void {
@@ -24,4 +28,12 @@ export class SidebarComponent {
   }
 
   sidebarVisible: boolean = false;
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.sidebarVisible = false
+      }
+    })
+  }
 }
