@@ -1,3 +1,4 @@
-<app-sidebar></app-sidebar>
-
+<div *ngIf="sidebarActive">
+    <app-sidebar></app-sidebar>
+</div>
 <router-outlet />
