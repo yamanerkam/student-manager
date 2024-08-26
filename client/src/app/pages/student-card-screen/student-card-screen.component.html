@@ -1,14 +1,13 @@
 <div class="card">
     <h1>Students</h1>
 
-
     <div class="flex justify-content-center align-items-center gap-2">
         <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
-            <input pInputText placeholder="Search Student" [(ngModel)]="searchTerm" class="p-inputtext-lg"
+            <input pInputText placeholder="Search Student" [(ngModel)]="searchTerm.value" class="p-inputtext-lg"
                 style="width: 400px;" />
         </span>
-        <p-button (onClick)="studentsFilter(searchTerm)">find</p-button>
+        <p-button (onClick)="studentsFilter(searchTerm.value)">find</p-button>
     </div>
     <br>
     <br>

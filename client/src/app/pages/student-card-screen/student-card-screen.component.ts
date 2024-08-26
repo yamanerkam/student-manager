@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
@@ -24,11 +25,19 @@ export class StudentCardScreenComponent {
   // add this to your library
   students: Student[] = (studentData as any).default
   studentsFiltered: Student[] = []
-  searchTerm: string = '';
+  searchTerm = new BehaviorSubject<string>('');
+
+  searchTerm$ = this.searchTerm.asObservable();
+
+
+
+
 
   constructor() {
-    this.studentsFiltered = this.students; // Display all students initially
+    this.studentsFiltered = this.students;
+    console.log(this.searchTerm.value)
   }
+
 
   studentsFilter(name: string) {
     this.studentsFiltered = this.students.filter((stu) => stu.name.toLowerCase().includes(name.toLowerCase()));
