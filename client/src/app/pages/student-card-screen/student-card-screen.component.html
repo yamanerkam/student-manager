@@ -1,20 +1,20 @@
 <div class="card">
     <h1>Students</h1>
 
-    <p-toolbar>
 
-        <div class="p-toolbar-group-center">
-            <span class="p-input-icon-left">
-                <i class="pi pi-search"></i>
-                <input pInputText placeholder="Search Student" />
-            </span>
-        </div>
-
-    </p-toolbar>
+    <div class="flex justify-content-center align-items-center gap-2">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input pInputText placeholder="Search Student" [(ngModel)]="searchTerm" class="p-inputtext-lg"
+                style="width: 400px;" />
+        </span>
+        <p-button (onClick)="studentsFilter(searchTerm)">find</p-button>
+    </div>
+    <br>
     <br>
     <div class=" cards">
         <!-- I should study data binding  -->
-        <app-student-card *ngFor="let student of students" [student]="student" justTry="xxxxx" />
+        <app-student-card *ngFor="let student of studentsFiltered" [student]="student" justTry="xxxxx" />
     </div>
 
 </div>
