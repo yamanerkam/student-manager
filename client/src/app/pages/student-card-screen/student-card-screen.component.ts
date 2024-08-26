@@ -25,6 +25,7 @@ export class StudentCardScreenComponent {
   // add this to your library
   students: Student[] = (studentData as any).default
   studentsFiltered: Student[] = []
+  searchTermTemp = ""
   searchTerm = new BehaviorSubject<string>('');
 
   searchTerm$ = this.searchTerm.asObservable();
