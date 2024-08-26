@@ -26,17 +26,15 @@ export class StudentCardScreenComponent {
   students: Student[] = (studentData as any).default
   studentsFiltered: Student[] = []
   searchTermTemp = ""
-  searchTerm = new BehaviorSubject<string>('');
-
-  searchTerm$ = this.searchTerm.asObservable();
 
 
-
+  execute() {
+    this.studentsFilter(this.searchTermTemp)
+  }
 
 
   constructor() {
     this.studentsFiltered = this.students;
-    console.log(this.searchTerm.value)
   }
 
 

@@ -4,8 +4,8 @@
     <div class="flex justify-content-center align-items-center gap-2">
         <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
-            <input pInputText placeholder="Search Student" [(ngModel)]="searchTermTemp" class="p-inputtext-lg"
-                style="width: 400px;" />
+            <input pInputText placeholder="Search Student" [(ngModel)]="searchTermTemp" (ngModelChange)="execute()"
+                class="p-inputtext-lg" style="width: 400px;" />
         </span>
         <p-button (onClick)="studentsFilter(searchTermTemp)">find</p-button>
     </div>
