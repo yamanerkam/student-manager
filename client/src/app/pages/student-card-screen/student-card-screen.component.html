@@ -1,10 +1,20 @@
-<h1>Students</h1>
-<div class="cards">
+<div class="card">
+    <h1>Students</h1>
 
-    <!-- I should study data binding  -->
-    <app-student-card *ngFor="let student of students" [student]="student" justTry="xxxxx" />
+    <p-toolbar>
 
+        <div class="p-toolbar-group-center">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText placeholder="Search Student" />
+            </span>
+        </div>
 
-
+    </p-toolbar>
+    <br>
+    <div class=" cards">
+        <!-- I should study data binding  -->
+        <app-student-card *ngFor="let student of students" [student]="student" justTry="xxxxx" />
+    </div>
 
 </div>
