@@ -7,8 +7,12 @@
             <input pInputText placeholder="Search Student" [(ngModel)]="searchTermTemp" (ngModelChange)="execute()"
                 class="p-inputtext-lg" style="width: 400px;" />
         </span>
-        <p-button (onClick)="studentsFilter(searchTermTemp)">find</p-button>
+        <p-dropdown [options]="grades" [(ngModel)]="grade" optionLabel="Grade" placeholder="Select a Grade" />
+
+        <p-button (onClick)="studentsFilterByGrade(grade)">find</p-button>
+
     </div>
+
     <br>
     <br>
     <div class=" cards">
