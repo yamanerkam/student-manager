@@ -1,40 +1,19 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { ToDoComponent } from './pages/to-do/to-do.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { StudentCardScreenComponent } from './pages/student-card-screen/student-card-screen.component';
-import { StudentPageComponent } from './pages/student-page/student-page.component';
-import { NewStudentPageComponent } from './pages/new-student-page/new-student-page.component';
-import { HomeworkComponent } from './pages/homework/homework.component';
-import { CalenderComponent } from './pages/calender/calender.component';
-import { FinanceComponent } from './pages/finance/finance.component';
-import { MessagesComponent } from './pages/messages/messages.component';
-import { SettingsComponent } from './pages/settings/settings.component';
-import { NewPackageComponent } from './pages/new-package/new-package.component';
 
 export const routes: Routes = [
-
-    { path: 'login', component: LoginComponent },
+    { path: 'login', loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent) },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'signup', component: SignupComponent },
-    { path: 'home', component: HomepageComponent },
-    { path: 'todo', component: ToDoComponent },
-    { path: 'students', component: StudentCardScreenComponent },
-    { path: 'student/:id', component: StudentPageComponent },
-    { path: 'new-student', component: NewStudentPageComponent },
-    { path: 'homework', component: HomeworkComponent },
-    { path: 'calender', component: CalenderComponent },
-    { path: 'finance', component: FinanceComponent },
-    { path: 'messages', component: MessagesComponent },
-    { path: 'settings', component: SettingsComponent },
-    { path: 'new-package', component: NewPackageComponent },
-
-
-
-    { path: '**', component: NotFoundComponent },
-
-
-
+    { path: 'signup', loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent) },
+    { path: 'home', loadComponent: () => import('./pages/homepage/homepage.component').then(m => m.HomepageComponent) },
+    { path: 'todo', loadComponent: () => import('./pages/to-do/to-do.component').then(m => m.ToDoComponent) },
+    { path: 'students', loadComponent: () => import('./pages/student-card-screen/student-card-screen.component').then(m => m.StudentCardScreenComponent) },
+    { path: 'student/:id', loadComponent: () => import('./pages/student-page/student-page.component').then(m => m.StudentPageComponent) },
+    { path: 'new-student', loadComponent: () => import('./pages/new-student-page/new-student-page.component').then(m => m.NewStudentPageComponent) },
+    { path: 'homework', loadComponent: () => import('./pages/homework/homework.component').then(m => m.HomeworkComponent) },
+    { path: 'calender', loadComponent: () => import('./pages/calender/calender.component').then(m => m.CalenderComponent) },
+    { path: 'finance', loadComponent: () => import('./pages/finance/finance.component').then(m => m.FinanceComponent) },
+    { path: 'messages', loadComponent: () => import('./pages/messages/messages.component').then(m => m.MessagesComponent) },
+    { path: 'settings', loadComponent: () => import('./pages/settings/settings.component').then(m => m.SettingsComponent) },
+    { path: 'new-package', loadComponent: () => import('./pages/new-package/new-package.component').then(m => m.NewPackageComponent) },
+    { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent) }
 ];
